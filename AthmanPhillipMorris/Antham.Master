@@ -6,7 +6,7 @@
 <head runat="server">
     <title>The Athman</title>
     <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
-    <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder id="headerPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 
@@ -17,7 +17,7 @@
     </header>
     <section>
         <form id="formMaster" runat="server">
-                <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
+                <asp:ContentPlaceHolder ID="fphClient" runat="server">
                 </asp:ContentPlaceHolder>
         </form>
     </section>

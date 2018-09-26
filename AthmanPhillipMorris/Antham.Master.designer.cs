@@ -13,13 +13,13 @@ namespace AthmanPhillipMorris {
     public partial class Antham {
         
         /// <summary>
-        /// headPlaceHolder control.
+        /// headerPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder headPlaceHolder;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder headerPlaceHolder;
         
         /// <summary>
         /// formMaster control.
@@ -31,12 +31,12 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
         
         /// <summary>
-        /// formPlaceHolder control.
+        /// fphClient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder formPlaceHolder;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder fphClient;
     }
 }

@@ -1,41 +1,27 @@
-﻿.auto-style1 {
-    width: 4px;
-}
-
-.auto-style2 {
+﻿table {
     width: 725px;
-    height: 252px;
+    height: 250px;
 }
 
-.auto-style3 {
-    width: 5px;
-}
 
 .auto-style7 {
     width: 258px;
 }
 
-.auto-style8 {
+td {
+    height: 30px;
     width: 124px;
 }
-.auto-style4 {
-    width: 142px;
-}
 
-.auto-style5 {
-    height: 26px;
-    width: 142px;
-}
-
-.auto-style6 {
-    height: 30px;
-    width: 142px;
-}
 body {
     width: 604px; 
     height: 492px
 }
 
 .lblClientAddedMessage {
-    color: green;
+    color: whitesmoke;
+}
+
+button {
+    float: left;
 }

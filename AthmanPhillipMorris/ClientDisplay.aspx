@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>The Athman</title>
-    <link rel="stylesheet" type="text/css" href="Styles\\Main.css"/>
-    <link rel="stylesheet" type="text/css" href="Styles\\Client.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
+    <link rel="stylesheet" type="text/css" href="Styles\\Client.css" runat="server"/>
 </head>
 <body >
     <form id="form1" runat="server">

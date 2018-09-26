@@ -5,13 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>The Athman</title>
-    <link rel="stylesheet" type="text/css" href="Styles\\Main.css"/>
-    <link rel="stylesheet" type="text/css" href="Styles\\Feedback.css"/>
-    <style type="text/css">
-        .auto-style1 {
-            width: 224px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
+    <link rel="stylesheet" type="text/css" href="Styles\\Feedback.css" runat="server"/>
 </head>
 
 <header>
@@ -39,7 +34,7 @@
                     </asp:RadioButtonList>
                 </td>
                 <td class="auto-style7">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="rblService" Display="Dynamic" EnableClientScript="False">Please choose.</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvService" runat="server" ControlToValidate="rblService" Display="Dynamic" EnableClientScript="False" CssClass="validator">Please choose.</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -54,11 +49,11 @@
                     </asp:RadioButtonList>
                 </td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="rblEfficiency" Display="Dynamic" EnableClientScript="False">Please choose.</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvEfficiency" runat="server" ControlToValidate="rblEfficiency" Display="Dynamic" EnableClientScript="False" CssClass="validator">Please choose.</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
-                <td>Problem resolution:</td>
+                <td>Problem Resolution:</td>
             </tr>
             <tr>
                 <td>
@@ -69,7 +64,7 @@
                     </asp:RadioButtonList>
                 </td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rblProblem" Display="Dynamic" EnableClientScript="False">Please choose.</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvProblem" runat="server" ControlToValidate="rblProblem" Display="Dynamic" EnableClientScript="False" CssClass="validator">Please choose.</asp:RequiredFieldValidator>
                 </td>
             </tr>
         </table>
@@ -94,7 +89,7 @@
                     </asp:RadioButtonList>
                 </td>
                 <td>
-                    <asp:CustomValidator ID="cvdContact" runat="server" Display="Dynamic" EnableClientScript="False" OnServerValidate="cvdContact_ServerValidate">Please choose</asp:CustomValidator>
+                    <asp:CustomValidator ID="cvdContact" runat="server" Display="Dynamic" EnableClientScript="False" OnServerValidate="cvdContact_ServerValidate" CssClass="validator">Please choose</asp:CustomValidator>
                 </td>
             </tr>
             <tr>

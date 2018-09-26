@@ -67,13 +67,13 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.WebControls.RadioButtonList rblService;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// rfvService control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvService;
         
         /// <summary>
         /// rblEfficiency control.
@@ -85,13 +85,13 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.WebControls.RadioButtonList rblEfficiency;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// rfvEfficiency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEfficiency;
         
         /// <summary>
         /// rblProblem control.
@@ -103,13 +103,13 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.WebControls.RadioButtonList rblProblem;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// rfvProblem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProblem;
         
         /// <summary>
         /// tbxAdditionalComments control.

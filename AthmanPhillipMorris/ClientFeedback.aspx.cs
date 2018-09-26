@@ -43,29 +43,46 @@ namespace AthmanPhillipMorris
 
         }
 
+        /// <summary>
+        /// Updates the controls.
+        /// </summary>
         private void updateControls()
         {
             bool isClientValid = (bool) HttpContext.Current.Session["VailidClient"];
             if (!isClientValid)
             {
-                this.rblEfficiency.Enabled = false;
-                this.rblProblem.Enabled = false;
-                this.rblService.Enabled = false;
-                this.btnSubmit.Enabled = false;
-                this.cbxContact.Enabled = false;
-                this.tbxAdditionalComments.Enabled = false;
-               // this.rblContact.Enabled = false;
+                this.disablePageControls();
             }
             else
             {
-                this.rblEfficiency.Enabled = true;
-                this.rblProblem.Enabled = true;
-                this.rblService.Enabled = true;
-                this.btnSubmit.Enabled = true;
-                this.cbxContact.Enabled = true;
-                this.tbxAdditionalComments.Enabled = true;
-                //this.rblContact.Enabled = true;
+                this.enablePageControls();
             }
+        }
+
+        /// <summary>
+        /// Enables the page controls.
+        /// </summary>
+        private void enablePageControls()
+        {
+            this.rblEfficiency.Enabled = true;
+            this.rblProblem.Enabled = true;
+            this.rblService.Enabled = true;
+            this.btnSubmit.Enabled = true;
+            this.cbxContact.Enabled = true;
+            this.tbxAdditionalComments.Enabled = true;
+        }
+
+        /// <summary>
+        /// Disables the page controls.
+        /// </summary>
+        private void disablePageControls()
+        {
+            this.rblEfficiency.Enabled = false;
+            this.rblProblem.Enabled = false;
+            this.rblService.Enabled = false;
+            this.btnSubmit.Enabled = false;
+            this.cbxContact.Enabled = false;
+            this.tbxAdditionalComments.Enabled = false;
         }
 
         /// <summary>
@@ -84,22 +101,7 @@ namespace AthmanPhillipMorris
             {
                 List<Incident> incidents = new List<Incident>();
                 clientsTable.RowFilter = $"ClientID = '{Convert.ToInt32(this.tbxClientID.Text)}'";
-                foreach (DataRowView row in clientsTable)
-                {
-                    Incident currentIncident = new Incident();
-                    if (!row[5].ToString().Trim().Equals(""))
-                    {
-                        currentIncident.DateClosed = DateTime.Parse(row[5].ToString());
-                        currentIncident.Title = row[6].ToString();
-                        currentIncident.ProductID = row[2].ToString();
-                        incidents.Add(currentIncident);
-                        
-                    }
-                    else
-                    {
-                        HttpContext.Current.Session["VailidClient"] = false;
-                    }
-                }
+                searchForValidClients(clientsTable, incidents);
 
                 this.populateIncidents(incidents);
             }
@@ -112,6 +114,29 @@ namespace AthmanPhillipMorris
             setClientToValidIfThereIsValidClientIDInput();
         }
 
+        private static void searchForValidClients(DataView clientsTable, List<Incident> incidents)
+        {
+            foreach (DataRowView row in clientsTable)
+            {
+                Incident currentIncident = new Incident();
+                if (!row[5].ToString().Trim().Equals(""))
+                {
+                    currentIncident.DateClosed = DateTime.Parse(row[5].ToString());
+                    currentIncident.Title = row[6].ToString();
+                    currentIncident.ProductID = row[2].ToString();
+                    incidents.Add(currentIncident);
+                }
+                else
+                {
+                    HttpContext.Current.Session["VailidClient"] = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Populates the incidents.
+        /// </summary>
+        /// <param name="incidents">The incidents.</param>
         private void populateIncidents(List<Incident> incidents)
         {
             incidents = incidents.OrderBy(currentIncident => currentIncident.DateClosed).ToList();
@@ -122,6 +147,9 @@ namespace AthmanPhillipMorris
             }
         }
 
+        /// <summary>
+        /// Sets the client to valid if there is valid client identifier input.
+        /// </summary>
         private void setClientToValidIfThereIsValidClientIDInput()
         {
             if (this.lbxClosedIncidents.Items.Count > 0)
@@ -142,21 +170,18 @@ namespace AthmanPhillipMorris
             updateControls();
         }
 
+        /// <summary>
+        /// Handles the Click event of the btnSubmit control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
                 try
                 {
-                    Feedback feedback = new Feedback();
-                    feedback.ClientID = Convert.ToInt32(this.tbxClientID.Text);
-                    feedback.Contact = this.cbxContact.Checked;
-                    feedback.ContactMethod = this.rblContact.SelectedValue;
-                    feedback.Comments = this.tbxAdditionalComments.Text;
-                    feedback.ServiceTime = Convert.ToInt32(this.rblService.SelectedValue);
-                    feedback.Efficiency = Convert.ToInt32(this.rblEfficiency.SelectedValue);
-                    feedback.Resolution = Convert.ToInt32(this.rblProblem.SelectedValue);
-                    HttpContext.Current.Session["ValidSubmission"] = feedback;
+                    sessionizeFeedback();
                     Response.Redirect("feedbackComplete.aspx");
                 }
                 catch (Exception)
@@ -167,6 +192,24 @@ namespace AthmanPhillipMorris
 
         }
 
+        private void sessionizeFeedback()
+        {
+            Feedback feedback = new Feedback();
+            feedback.ClientID = Convert.ToInt32(this.tbxClientID.Text);
+            feedback.Contact = this.cbxContact.Checked;
+            feedback.ContactMethod = this.rblContact.SelectedValue;
+            feedback.Comments = this.tbxAdditionalComments.Text;
+            feedback.ServiceTime = Convert.ToInt32(this.rblService.SelectedValue);
+            feedback.Efficiency = Convert.ToInt32(this.rblEfficiency.SelectedValue);
+            feedback.Resolution = Convert.ToInt32(this.rblProblem.SelectedValue);
+            HttpContext.Current.Session["ValidSubmission"] = feedback;
+        }
+
+        /// <summary>
+        /// Handles the CheckedChanged event of the cbxContact control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         protected void cbxContact_CheckedChanged(object sender, EventArgs e)
         {
             if (this.cbxContact.Checked)
@@ -178,12 +221,15 @@ namespace AthmanPhillipMorris
                 this.rblContact.Enabled = false;
                 this.rblContact.ClearSelection();
                 this.rblContact.AutoPostBack = true;
-
-
             }
             
         }
 
+        /// <summary>
+        /// Handles the ServerValidate event of the cvdContact control.
+        /// </summary>
+        /// <param name="source">The source of the event.</param>
+        /// <param name="args">The <see cref="ServerValidateEventArgs"/> instance containing the event data.</param>
         protected void cvdContact_ServerValidate(object source, ServerValidateEventArgs args)
         {
             args.IsValid = !this.cbxContact.Checked || this.rblContact.SelectedItem != null;

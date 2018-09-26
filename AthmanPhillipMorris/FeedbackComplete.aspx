@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>The Athman</title>
-    <link rel="stylesheet" type="text/css" href="Styles\\Main.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
 </head>
 
 <header>

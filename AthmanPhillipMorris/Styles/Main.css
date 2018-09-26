@@ -1,0 +1,75 @@
+/* Styles for the elements */
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    border: 3px solid green;
+    width: 550px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: White;
+}
+header {
+    border-bottom: 2px solid green;
+    padding-bottom: 1em;
+}
+DropDownList {
+    Height: 24px;
+    Width: 164px;
+    float: right;
+}
+header h1 {
+    font-size: 200%;
+    font-weight: bold;
+    color: #0000FF;
+    margin: 0 0 .25em;
+}
+header h2 {
+    font-size: 140%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: purple;
+    margin-left: 1em;
+}
+section {
+    padding: 10px;
+}
+h1 {
+    font-size: 140%;
+    color: green;
+    margin: .5em 0 .25em;
+}
+h2
+{
+    font-size: 120%;
+    margin: .5em 0;
+}
+footer {
+    border-top: 2px solid purple;
+}
+footer p {
+    font-size: 80%;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.siteImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auto-style1 {
+    height: 30px;
+}
+.auto-style2 {
+    height: 30px;
+    margin-right: 18px;
+}
+.auto-style3 {
+    height: 26px;
+}
+
+RequiredFieldValidator {
+    color: red;
+}

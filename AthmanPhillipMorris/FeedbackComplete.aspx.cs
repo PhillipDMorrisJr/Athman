@@ -47,7 +47,7 @@ namespace AthmanPhillipMorris
         protected void btnHome_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("ClientDisplay.aspx");
+            Response.Redirect("~/Homepage.aspx");
         }
     }
 }

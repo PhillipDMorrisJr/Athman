@@ -72,6 +72,7 @@
     <Content Include="ClientFeedback.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="FeedbackComplete.aspx" />
+    <Content Include="Homepage.aspx" />
     <Content Include="Images\bottom.jpg" />
     <Content Include="Images\content.jpg" />
     <Content Include="Images\header.jpg" />
@@ -116,6 +117,13 @@
       <DependentUpon>FeedbackComplete.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Incident.cs" />
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

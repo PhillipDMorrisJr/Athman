@@ -67,6 +67,15 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.WebControls.RadioButtonList rblService;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// rblEfficiency control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.WebControls.RadioButtonList rblEfficiency;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// rblProblem control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace AthmanPhillipMorris {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblProblem;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// tbxAdditionalComments control.
@@ -119,6 +146,15 @@ namespace AthmanPhillipMorris {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblContact;
+        
+        /// <summary>
+        /// cvdContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvdContact;
         
         /// <summary>
         /// btnSubmit control.

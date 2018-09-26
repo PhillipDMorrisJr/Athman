@@ -6,6 +6,12 @@ using System.Web;
 
 namespace AthmanPhillipMorris.App_Code
 {
+    /// <summary>
+    /// The client
+    /// </summary>
+    /// <author>
+    /// Phillip Morris
+    /// </author>
     public class Client
     {
         #region Properties

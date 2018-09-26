@@ -7,24 +7,6 @@
     <title>The Athman</title>
     <link rel="stylesheet" type="text/css" href="Styles\\Main.css"/>
     <link rel="stylesheet" type="text/css" href="Styles\\Client.css"/>
-    <style type="text/css">
-        .auto-style1 {
-            width: 4px;
-        }
-        .auto-style2 {
-            width: 725px;
-            height: 252px;
-        }
-        .auto-style3 {
-            width: 5px;
-        }
-        .auto-style7 {
-            width: 258px;
-        }
-        .auto-style8 {
-            width: 124px;
-        }
-    </style>
 </head>
 <body >
     <form id="form1" runat="server">
@@ -121,7 +103,7 @@
                 </tr>
                 </table>
                 <p>
-                    <asp:Label ID="lblContactAdded" runat="server" Text="Label" CssClass="clientAddedMessage"></asp:Label>
+                    <asp:Label ID="lblContactAdded" runat="server" Text="Label" CssClass="lblClientAddedMessage"></asp:Label>
                 </p>
     </form>
 </body>

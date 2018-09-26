@@ -13,8 +13,11 @@ using Incident = AthmanPhillipMorris.AthmanPhillipMorris.App_Code.Incident;
 namespace AthmanPhillipMorris
 {
     /// <summary>
-    ///  Handles user feedback
+    /// Handles user feedback
     /// </summary>
+    /// <author>
+    /// Phillip Morris
+    /// </author>
     /// <seealso cref="System.Web.UI.Page" />
     public partial class ClientFeedback : System.Web.UI.Page
     {
@@ -51,7 +54,7 @@ namespace AthmanPhillipMorris
                 this.btnSubmit.Enabled = false;
                 this.cbxContact.Enabled = false;
                 this.tbxAdditionalComments.Enabled = false;
-                this.rblContact.Enabled = false;
+               // this.rblContact.Enabled = false;
             }
             else
             {
@@ -61,7 +64,7 @@ namespace AthmanPhillipMorris
                 this.btnSubmit.Enabled = true;
                 this.cbxContact.Enabled = true;
                 this.tbxAdditionalComments.Enabled = true;
-                this.rblContact.Enabled = true;
+                //this.rblContact.Enabled = true;
             }
         }
 
@@ -141,23 +144,49 @@ namespace AthmanPhillipMorris
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            try
+            if (Page.IsValid)
             {
-                Feedback feedback = new Feedback();
-                feedback.ClientID = Convert.ToInt32(this.tbxClientID.Text);
-                feedback.Contact = this.cbxContact.Checked;
-                feedback.Comments = this.tbxAdditionalComments.Text;
-                feedback.ContactMethod = this.rblContact.SelectedValue;
-                feedback.ServiceTime = Convert.ToInt32(this.rblService.SelectedValue);
-                feedback.Efficiency = Convert.ToInt32(this.rblEfficiency.SelectedValue);
-                feedback.Resolution = Convert.ToInt32(this.rblProblem.SelectedValue);
-                HttpContext.Current.Session["ValidSubmission"] = feedback;
-                Response.Redirect("feedbackComplete.aspx");
+                try
+                {
+                    Feedback feedback = new Feedback();
+                    feedback.ClientID = Convert.ToInt32(this.tbxClientID.Text);
+                    feedback.Contact = this.cbxContact.Checked;
+                    feedback.ContactMethod = this.rblContact.SelectedValue;
+                    feedback.Comments = this.tbxAdditionalComments.Text;
+                    feedback.ServiceTime = Convert.ToInt32(this.rblService.SelectedValue);
+                    feedback.Efficiency = Convert.ToInt32(this.rblEfficiency.SelectedValue);
+                    feedback.Resolution = Convert.ToInt32(this.rblProblem.SelectedValue);
+                    HttpContext.Current.Session["ValidSubmission"] = feedback;
+                    Response.Redirect("feedbackComplete.aspx");
+                }
+                catch (Exception)
+                {
+                    Console.Write("Invalid submission");
+                }
             }
-            catch (Exception)
+
+        }
+
+        protected void cbxContact_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.cbxContact.Checked)
             {
-                Console.Write("Invalid submission");
+                this.rblContact.Enabled = true;
             }
+            else
+            {
+                this.rblContact.Enabled = false;
+                this.rblContact.ClearSelection();
+                this.rblContact.AutoPostBack = true;
+
+
+            }
+            
+        }
+
+        protected void cvdContact_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = !this.cbxContact.Checked || this.rblContact.SelectedItem != null;
         }
     }
 

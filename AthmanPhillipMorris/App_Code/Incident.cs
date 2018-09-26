@@ -11,6 +11,9 @@
         /// <summary>
         /// Incident based on the incident table in the Athman database
         /// </summary>
+        /// <author>
+        /// Phillip Morris
+        /// </author>
         public class Incident
         {
             /// <summary>

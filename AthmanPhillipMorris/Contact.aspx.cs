@@ -8,6 +8,13 @@ using AthmanPhillipMorris.App_Code;
 
 namespace AthmanPhillipMorris
 {
+    /// <summary>
+    /// The contact
+    /// </summary>
+    /// <seealso cref="System.Web.UI.Page" />
+    /// <author>
+    /// Phillip Morris
+    /// </author>
     public partial class Contact : System.Web.UI.Page
     {
         private ClientList contacts;

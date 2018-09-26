@@ -12,6 +12,12 @@ namespace AthmanPhillipMorris
     /// <summary>
     /// Main Page
     /// </summary>
+    /// <author>
+    /// Phillip Morris
+    /// </author>
+    /// <version>
+    /// Fall 2018
+    /// </version>
     /// <seealso cref="System.Web.UI.Page" />
     public partial class Main : System.Web.UI.Page
     {

@@ -8,6 +8,9 @@ namespace AthmanPhillipMorris.App_Code
     /// <summary>
     /// A list of clients
     /// </summary>
+    /// <author>
+    /// Phillip Morris
+    /// </author>
     public class ClientList
     {
         private List<Client> clientList;

@@ -6,8 +6,11 @@ using System.Web;
 namespace AthmanPhillipMorris.App_Code
 {
     /// <summary>
-    ///  The feedback based on the incident database
+    /// The feedback based on the incident database
     /// </summary>
+    /// <author>
+    /// Phillip Morris
+    /// </author>
     public class Feedback
     {
         /// <summary>

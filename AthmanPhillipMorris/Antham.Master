@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Antham.master.cs" Inherits="AthmanPhillipMorris.Antham" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>The Athman</title>
+    <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
+    <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <header>
+        <h1>The AthMan</h1>
+        <h2>"Helping to Manage the World's Athletes"</h2>
+    </header>
+    <section>
+        <form id="formMaster" runat="server">
+                <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+        </form>
+    </section>
+    <footer>Please contact us at <a href="tel:+18843284626">8‐The‐AthMan</a> or email us at <a href="mailto:info@athman.com">info@athman.com</a></footer>
+
+</body>
+</html>

@@ -85,6 +85,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Antham.Master.cs">
+      <DependentUpon>Antham.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Antham.Master.designer.cs">
+      <DependentUpon>Antham.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Client.cs" />
     <Compile Include="ClientDisplay.aspx.cs">
       <DependentUpon>ClientDisplay.aspx</DependentUpon>
@@ -128,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Thumbs.db" />
+    <Content Include="Antham.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

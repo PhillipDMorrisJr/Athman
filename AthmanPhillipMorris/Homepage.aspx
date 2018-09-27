@@ -5,12 +5,8 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="formPlaceHolder"></asp:Content>
-<form id="form1" runat="server">
-    <nav>
         <ul>
             <a href="ClientDisplay.aspx">Client Display</a>
             <a href="ClientFeedback.aspx">Client Feedback</a>
         </ul>
-    </nav>
-</form>
 </asp:Content>

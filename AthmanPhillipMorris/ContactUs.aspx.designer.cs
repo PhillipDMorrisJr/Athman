@@ -10,6 +10,6 @@
 namespace AthmanPhillipMorris {
     
     
-    public partial class Homepage {
+    public partial class ContactUs {
     }
 }

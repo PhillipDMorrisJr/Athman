@@ -34,7 +34,9 @@ header h2 {
 section {
     padding: 10px;
 }
-
+a {
+    color: orange;
+}
 h2
 {
     font-size: 120%;

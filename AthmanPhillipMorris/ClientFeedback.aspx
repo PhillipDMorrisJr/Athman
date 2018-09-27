@@ -61,8 +61,7 @@
         <asp:Table runat="server">
             <asp:TableRow>
                 <asp:TableCell>
-                    
-                    <asp:Label ID="Label1" runat="server" Text="Do you wish to be contacted"></asp:Label>
+                    <asp:Label ID="lblContactUser" runat="server" Text="Do you wish to be contacted"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

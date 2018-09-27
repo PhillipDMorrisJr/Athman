@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="Styles\\Client.css"/>
 </asp:Content>
 
-<asp:Content runat="server" ContentPlaceHolderID="fphClient">
+<asp:Content runat="server" ContentPlaceHolderID="formPlaceHolder">
         <asp:DropDownList ID="ddlClients" runat="server" DataSourceID="sdsClients" DataTextField="Name" DataValueField="Name" AutoPostBack="True" OnSelectedIndexChanged="Onselection_Changed">
         </asp:DropDownList>
         <asp:SqlDataSource ID="sdsClients" runat="server" ConnectionString="<%$ ConnectionStrings:AthmanConnection %>" ProviderName="<%$ ConnectionStrings:AthmanConnection.ProviderName %>" SelectCommand="SELECT * FROM [Clients] ORDER BY [Name]"></asp:SqlDataSource>

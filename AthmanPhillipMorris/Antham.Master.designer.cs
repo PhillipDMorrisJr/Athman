@@ -31,12 +31,12 @@ namespace AthmanPhillipMorris {
         protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
         
         /// <summary>
-        /// fphClient control.
+        /// formPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder fphClient;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder formPlaceHolder;
     }
 }

@@ -1,24 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="feedbackComplete.aspx.cs" Inherits="AthmanPhillipMorris.FeedbackComplete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Antham.Master" CodeBehind="feedbackComplete.aspx.cs"  Inherits="AthmanPhillipMorris.FeedbackComplete" %>
 
-<!DOCTYPE html>
+<asp:Content ID="headContent" ContentPlaceHolderID="headerPlaceHolder" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>The Athman</title>
-    <link rel="stylesheet" type="text/css" href="Styles\\Main.css" runat="server"/>
-</head>
-
-<body>
-    <header>
-        <h1>The AthMan</h1>
-        <h2>"Helping to Manage the World's Athletes"</h2>
-    </header>
-
-    <form id="form1" runat="server">
-        <div>
+<asp:Content runat="server" ContentPlaceHolderID="formPlaceHolder">
+        <section>
             <asp:Label ID="lblReportSummary" runat="server" Text="Waiting on report"></asp:Label>
-        </div>
+        </section>
         <asp:Button ID="btnHome" runat="server" OnClick="btnHome_Click" Text="HOME" />
-    </form>
-    </body>
-</html>
+</asp:Content>

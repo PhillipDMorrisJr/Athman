@@ -17,6 +17,23 @@
     </header>
     <section>
         <form id="formMaster" runat="server">
+            <nav>
+                <asp:Menu runat="server" StaticEnableDefaultPopOutImage="False" Orientation="Horizontal" RenderingMode="Table" DataSourceID="mdsSite" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#F5FAFA" StaticSubMenuIndent="10px" Height="50">
+                    <DynamicHoverStyle ForeColor="Orange" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#B5C7DE" />
+                    <DynamicSelectedStyle BackColor="#507CD1" />
+                    <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#507CD1" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="mdsSite" runat="server" ShowStartingNode="False" />
+            </nav>
+            <nav>
+                <asp:SiteMapPath runat="server" ForeColor="Orange">
+
+                </asp:SiteMapPath>
+            </nav>
                 <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
         </form>

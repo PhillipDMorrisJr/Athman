@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="Homepage.aspx" title="Home"  description="Home page">
-    <siteMapNode url="ClientDisplay.aspx" title="Client Selection"  description="Select Client" />
-    <siteMapNode url="Contact.aspx" title="Contacts"  description="View Contacts" />
-    <siteMapNode url="ClientFeedback.aspx" title="Feedback" description="Tell us how we are doing">
-      <siteMapNode url="FeedbackComplete.aspx" title="Feedback submitted" description="Your feedback is being processed"/>
-     </siteMapNode>
+    <siteMapNode url="ClientDisplay.aspx" title="Client Selection"  description="Select Client"/>
+      <siteMapNode url="ClientFeedback.aspx" title="Feedback" description="Tell us how we are doing"/>
     <siteMapNode url="ContactUs.aspx" title="Contact us" description="View our contact information"/>
   </siteMapNode>
 </siteMap>

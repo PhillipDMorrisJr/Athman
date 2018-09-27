@@ -75,13 +75,16 @@
     <Content Include="FeedbackComplete.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Images\bottom.jpg" />
+    <Content Include="Images\client.png" />
     <Content Include="Images\content.jpg" />
+    <Content Include="Images\feedback.jpg" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\menu.jpg" />
     <Content Include="Images\pic.jpg" />
     <Content Include="Styles\Client.css" />
     <Content Include="Styles\Contact.css" />
     <Content Include="Styles\Feedback.css" />
+    <Content Include="Styles\Home.css" />
     <Content Include="Styles\Main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -151,6 +154,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
